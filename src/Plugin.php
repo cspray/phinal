@@ -66,7 +66,7 @@ class Plugin implements PluginEntryPointInterface, AfterClassLikeAnalysisInterfa
         IssueBuffer::accepts(
             new ClassNotFinal(
                 sprintf('%s has not been marked as final nor is marked for inheritance.', $class),
-                new CodeLocation($event->getStatementsSource(), $event->getStmt())
+                new CodeLocation($event->getStatementsSource(), $event->getStmt(), single_line: true)
             )
         );
 
