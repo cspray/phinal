@@ -5,9 +5,7 @@
     <arg name="colors"/>
 
     <!-- Paths to check -->
-    <file>Plugin.php</file>
-    <file>tests</file>
-
+    <file>src</file>
 
     <!-- inherit rules from: -->
     <rule ref="PSR12"/>

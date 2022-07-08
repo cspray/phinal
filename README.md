@@ -21,7 +21,7 @@ use Cspray\Phinal\AllowInheritance;
 final class ProperlyMarkedFinal {}
 
 #[AllowInheritance('Explain why you would need to inherit this.')]
-class YouCanInherite
+class YouCanInheritThis {}
 ```
 
 Bad! :-1:
