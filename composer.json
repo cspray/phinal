@@ -1,16 +1,12 @@
 {
-    "name": "weirdan/psalm-plugin-skeleton",
-    "description": "Template to create psalm-plugin projects from",
+    "name": "cspray/phinal",
+    "description": "Enforce final on your classes!",
     "type": "psalm-plugin",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Bruce Weirdan",
-            "email": "weirdan@gmail.com"
-        }
-    ],
     "require": {
-        "vimeo/psalm": "dev-master"
+        "php": "^8.0",
+        "ext-simplexml": "*",
+        "vimeo/psalm": "4.*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.5",
@@ -18,23 +14,24 @@
         "psalm/plugin-phpunit": "^0.16.0",
         "weirdan/prophecy-shim": "^2.0",
         "weirdan/codeception-psalm-module": "^0.13.1",
-        "codeception/codeception": "^4.1"
+        "codeception/codeception": "^4.1",
+        "behat/behat": "^3.11"
     },
     "extra": {
         "psalm": {
-            "pluginClass": "Weirdan\\PsalmPluginSkeleton\\Plugin"
+            "pluginClass": "Cspray\\Phinal\\Plugin"
         }
     },
     "autoload": {
         "psr-4": {
-            "Weirdan\\PsalmPluginSkeleton\\": [
-                "."
+            "Cspray\\Phinal\\": [
+                "src"
             ]
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Weirdan\\PsalmPluginSkeleton\\Tests\\": [
+            "Cspray\\Phinal\\": [
                 "tests/_support",
                 "tests"
             ]
