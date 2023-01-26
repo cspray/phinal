@@ -4,8 +4,17 @@ Do you like final? _Really_ like it? Then enforce it on all your classes! When y
 
 ## Installation
 
+### Running Psalm 5
+
 ```
 composer require --dev cspray/phinal
+vendor/bin/psalm-plugin enable cspray/phinal
+```
+
+### Running Psalm 4
+
+```
+composer require --dev cspray/phinal:1.0.0
 vendor/bin/psalm-plugin enable cspray/phinal
 ```
 
