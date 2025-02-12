@@ -17,6 +17,7 @@ namespace Weirdan\PsalmPluginSkeleton\Tests;
  *
  * @SuppressWarnings(PHPMD)
  * @psalm-suppress UndefinedTrait
+ * @psalm-suppress UnusedClass
 */
 class AcceptanceTester extends \Codeception\Actor
 {

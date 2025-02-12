@@ -4,6 +4,7 @@ namespace Cspray\Phinal;
 
 use Attribute;
 
+/** @api */
 #[Attribute(Attribute::TARGET_CLASS)]
 final class AllowInheritance
 {

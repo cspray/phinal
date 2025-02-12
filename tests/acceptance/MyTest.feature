@@ -33,6 +33,7 @@ Feature: basics
       """
       <?php
 
+      /** @psalm-suppress UnusedClass */
       abstract class AbstractClass {}
       """
     When I run Psalm
@@ -43,6 +44,7 @@ Feature: basics
       """
       <?php
 
+      /** @psalm-suppress UnusedClass */
       interface SomeInterface {}
       """
     When I run Psalm
@@ -53,6 +55,7 @@ Feature: basics
       """
       <?php
 
+      /** @psalm-suppress UnusedClass */
       final class SomeFinalClass {}
       """
     When I run Psalm
@@ -65,7 +68,7 @@ Feature: basics
 
       interface SomeInterface {}
 
-      $class = new class implements SomeInterface {};
+      $_class = new class implements SomeInterface {};
       """
     When I run Psalm
     Then I see no errors
@@ -77,6 +80,7 @@ Feature: basics
 
       use Cspray\Phinal\AllowInheritance;
 
+      /** @psalm-suppress UnusedClass */
       #[AllowInheritance('We are allowing inheritance because we could not figure out how to use composition')]
       class SomeClassThatGetsInherited {}
       """
