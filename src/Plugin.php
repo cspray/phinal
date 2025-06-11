@@ -12,9 +12,9 @@ use Psalm\Plugin\PluginEntryPointInterface;
 use Psalm\Plugin\RegistrationInterface;
 
 /** @psalm-suppress UnusedClass */
-class Plugin implements PluginEntryPointInterface, AfterClassLikeAnalysisInterface
+final class Plugin implements PluginEntryPointInterface, AfterClassLikeAnalysisInterface
 {
-    /** @return void */
+    #[\Override]
     public function __invoke(RegistrationInterface $psalm, ?SimpleXMLElement $config = null): void
     {
         // Psalm allows arbitrary content to be stored under you plugin entry in
@@ -25,6 +25,7 @@ class Plugin implements PluginEntryPointInterface, AfterClassLikeAnalysisInterfa
         $psalm->registerHooksFromClass($this::class);
     }
 
+    #[\Override]
     public static function afterStatementAnalysis(AfterClassLikeAnalysisEvent $event)
     {
         $stmt = $event->getStmt();

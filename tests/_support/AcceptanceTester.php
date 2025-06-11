@@ -19,7 +19,7 @@ namespace Weirdan\PsalmPluginSkeleton\Tests;
  * @psalm-suppress UndefinedTrait
  * @psalm-suppress UnusedClass
 */
-class AcceptanceTester extends \Codeception\Actor
+final class AcceptanceTester extends \Codeception\Actor
 {
     use _generated\AcceptanceTesterActions;
 
