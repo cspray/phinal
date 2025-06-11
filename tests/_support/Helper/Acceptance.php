@@ -6,6 +6,6 @@ namespace Weirdan\PsalmPluginSkeleton\Tests\Helper;
 // all public methods declared in helper class will be available in $I
 
 /** @psalm-suppress UnusedClass */
-class Acceptance extends \Codeception\Module
+final class Acceptance extends \Codeception\Module
 {
 }
